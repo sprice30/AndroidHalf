@@ -379,15 +379,15 @@ public void onOKAY(View v){
 
     public void onClickResume(View v){
         setContentView(R.layout.resume);
-        Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
-        String[] items = new String[]{"Canned Food", "Clothing Drive", "Shelter", "Other"};
+        Spinner resumes = (Spinner)findViewById(R.id.spinner1);
+        String[] items = new String[]{"Education", "Business", "CS", "EE"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        dropdown.setAdapter(adapter);
+        resumes.setAdapter(adapter);
 
-        Spinner dropdown2 = (Spinner)findViewById(R.id.spinner2);
-        String[] items2 = new String[]{"Canned Food", "Clothing Drive", "Shelter", "Other"};
+        Spinner otherDocs = (Spinner)findViewById(R.id.spinner2);
+        String[] items2 = new String[]{"Cover Letter-General", "References", "Shelter", "Other"};
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items2);
-        dropdown2.setAdapter(adapter2);
+        otherDocs.setAdapter(adapter2);
 
         if (type == "position"){
             final TextView viewing1 = (TextView) findViewById(R.id.textView6);
