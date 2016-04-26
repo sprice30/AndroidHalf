@@ -17,6 +17,8 @@ public class AddingJob extends AppCompatActivity {
     public String title = "",title2 = "",title3 = "",title4 = "" , des, loc, sal;
     public int one = 0,two = 0,three = 0, four = 0;
     public int check = 0, check2 = 0, check3= 0, check4 = 0;
+    public int current = -1;
+
 
     public void onButtonClickPost(View v){
         JT = (EditText) findViewById(R.id.editTextjobTitle);
@@ -25,13 +27,16 @@ public class AddingJob extends AppCompatActivity {
         S = (EditText) findViewById(R.id.editTextSal);
         if(title == "") {
             title = JT.getText().toString();
+            current = 1;
             one = 1;
         }
         else if(title2 == ""){
             title2 = JT.getText().toString();
+            current =2;
             two = 1;
         }
         else if(title3 == ""){
+            current = 3;
             title3 = JT.getText().toString();
             three = 1;
 
@@ -39,6 +44,7 @@ public class AddingJob extends AppCompatActivity {
         else {
             title4 = JT.getText().toString();
             four = 1;
+            current = 4;
         }
         des = JD.getText().toString();
         loc = L.getText().toString();
@@ -109,7 +115,20 @@ public class AddingJob extends AppCompatActivity {
             }
         }
             public void onButtonClickBack(View v) {
+                if (current == 1) {
+                    title = "";
+                }
+                else if(current == 2){
+                    title2 = "";
+                }
+                else if(current == 3){
+                    title3 = "";
+                }
+                else{
+                    title4 = "";
+                }
              setContentView(R.layout.paj1);
+
          }
 
             public void onButtonClickDelete1(View v){
@@ -148,7 +167,8 @@ public class AddingJob extends AppCompatActivity {
         }
 
 public void onClickEmployer(View v){
-    setContentView(R.layout.employer);
+    Intent myIntent = new Intent(AddingJob.this, Employer.class);
+    startActivity(myIntent);
 }
     public void onClickActMain(View v){
         Intent myIntent = new Intent(AddingJob.this, MainActivity.class);
@@ -161,6 +181,7 @@ public void onClickEmployer(View v){
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.paj1);
+
     }
 
 
