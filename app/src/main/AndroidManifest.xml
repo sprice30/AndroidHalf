@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddingJob"></activity>
+        <activity android:name=".Employer"></activity>
     </application>
 
 </manifest>
