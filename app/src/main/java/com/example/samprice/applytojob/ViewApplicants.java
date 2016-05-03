@@ -9,9 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-/**
- * Created by samprice on 5/2/16.
- */
 public class ViewApplicants extends AppCompatActivity {
    String jobSelected;
 
@@ -27,6 +24,7 @@ public class ViewApplicants extends AppCompatActivity {
         final Spinner jobsPosted = (Spinner) findViewById(R.id.spinner1);
         String[] items = new String[]{titles.getJob1(), titles.getJob2(), titles.getJob3(), titles.getJob4()};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        assert jobsPosted != null;
         jobsPosted.setAdapter(adapter);
 
 
@@ -55,7 +53,9 @@ public void onClickCancel(View v){
 
 
         final TextView viewing1 = (TextView) findViewById(R.id.textView40);
-        viewing1.setText("Viewing " + jobSelected + " job.");
+        String text = "Viewing " + jobSelected + " job.";
+        assert viewing1 != null;
+        viewing1.setText(text);
 
     }
 

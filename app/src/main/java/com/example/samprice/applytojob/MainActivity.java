@@ -357,26 +357,31 @@ public void onOKAY(View v){
         Spinner resumes = (Spinner)findViewById(R.id.spinner1);
         String[] items = new String[]{"Education", "Business", "CS", "EE"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        assert resumes != null;
         resumes.setAdapter(adapter);
 
         Spinner otherDocs = (Spinner)findViewById(R.id.spinner2);
         String[] items2 = new String[]{"Cover Letter-General", "References"};
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items2);
+        assert otherDocs != null;
         otherDocs.setAdapter(adapter2);
 
         if (type.equals("position")){
             final TextView viewing1 = (TextView) findViewById(R.id.textView6);
             String text = "You are applying to Job" + num + " for " +job + " positon.";
+            assert viewing1 != null;
             viewing1.setText(text);
 
         } else if (type.equals("employer")){
             final TextView viewing1 = (TextView) findViewById(R.id.textView6);
             String text = "You are applying to Job" + num+ " with " + employer +".";
+            assert viewing1 != null;
             viewing1.setText(text);
 
         }else{ //type == tag
             final TextView viewing1 = (TextView) findViewById(R.id.textView6);
             String text = "You are applying to Job" +num + " with " + tags + " tags.";
+            assert viewing1 != null;
             viewing1.setText(text);
 
         }

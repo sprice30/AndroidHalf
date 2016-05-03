@@ -8,9 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-/**
- * Created by samprice on 4/25/16.
- */
+
 public class Employer extends AppCompatActivity {
     public String jobSelected;
 
