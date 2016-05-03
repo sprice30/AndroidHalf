@@ -17,7 +17,25 @@ public class AddingJob extends AppCompatActivity {
     public String title = "",title2 = "",title3 = "",title4 = "" , des, loc, sal;
     public int one = 0,two = 0,three = 0, four = 0;
     public int check = 0, check2 = 0, check3= 0, check4 = 0;
-    public int current = -1;
+    public int back = -1;
+
+
+    public String getJob1(){
+        return title;
+    }
+
+    public String getJob2(){
+        return title2;
+    }
+
+    public String getJob3(){
+        return title3;
+    }
+
+    public String getJob4(){
+        return title4;
+    }
+
 
 
     public void onButtonClickPost(View v){
@@ -27,16 +45,16 @@ public class AddingJob extends AppCompatActivity {
         S = (EditText) findViewById(R.id.editTextSal);
         if(title == "") {
             title = JT.getText().toString();
-            current = 1;
+            back = 1;
             one = 1;
         }
         else if(title2 == ""){
             title2 = JT.getText().toString();
-            current =2;
+            back =2;
             two = 1;
         }
         else if(title3 == ""){
-            current = 3;
+            back = 3;
             title3 = JT.getText().toString();
             three = 1;
 
@@ -44,7 +62,7 @@ public class AddingJob extends AppCompatActivity {
         else {
             title4 = JT.getText().toString();
             four = 1;
-            current = 4;
+           back = 4;
         }
         des = JD.getText().toString();
         loc = L.getText().toString();
@@ -114,22 +132,25 @@ public class AddingJob extends AppCompatActivity {
                 m4.setText(title4);
             }
         }
-            public void onButtonClickBack(View v) {
-                if (current == 1) {
+           public void onButtonClickBack(View v) {
+               /*  if (back == 1) {
                     title = "";
                 }
-                else if(current == 2){
+                else if(back == 2){
                     title2 = "";
                 }
-                else if(current == 3){
+                else if(back == 3){
                     title3 = "";
                 }
                 else{
                     title4 = "";
-                }
+                }*/
              setContentView(R.layout.paj1);
 
          }
+    public void onButtonPostNew(View v){
+        setContentView(R.layout.paj1);
+    }
 
             public void onButtonClickDelete1(View v){
                 final TextView m = (TextView) findViewById(R.id.c1);

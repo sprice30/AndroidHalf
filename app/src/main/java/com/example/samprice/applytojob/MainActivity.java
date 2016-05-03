@@ -26,8 +26,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity{ //implements OnItemSelectedListener {
     private EditText mSearch, mEmployer, mTag, mJob;
-    public String job, employer, tags, type, buttonNum;
-    public int num, jobFlag = 0;
+    public String job = "empty", employer ="empty", tags= "empty", type= "empty";
+    public int num = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,15 +44,20 @@ public void onClickApply(View v){
     //  setContentView(R.layout.);
     //}
 
-    public void onJobPostStart(View v){
+  /*  public void onJobPostStart(View v){
         Intent myIntent = new Intent(MainActivity.this, AddingJob.class);
         startActivity(myIntent);
     }
 
+    public void onClickView(View v) {
+    Intent myIntent = new Intent(MainActivity.this, ViewApplicants.class);
+        startActivity(myIntent);
+    }
 
-
+    */
     public void onClickEmployer(View v) {
-        setContentView(R.layout.employer);
+      Intent myIntent = new Intent(MainActivity.this, Employer.class);
+        startActivity(myIntent);
     }
 
     public void onClickJobSeeker(View v) {
@@ -242,9 +247,9 @@ public void onClickApply(View v){
     }
     public void onJ1(View v) {
         num = 1;
-        if (type == "position") {
+        if (type.equals("position")) {
             onClickApplyP(v);
-        } else if (type == "employer") {
+        } else if (type.equals("employer")) {
             onClickApplyE(v);
         } else { //type = tag
             onClickApplyT(v);
@@ -252,9 +257,9 @@ public void onClickApply(View v){
     }
     public void onJ2(View v){
         num = 2;
-        if (type == "position") {
+        if (type.equals("position")) {
             onClickApplyP(v);
-        } else if (type == "employer") {
+        } else if (type.equals("employer")) {
             onClickApplyE(v);
         } else { //type = tag
             onClickApplyT(v);
@@ -262,9 +267,9 @@ public void onClickApply(View v){
     }
     public void onJ3(View v){
         num = 3;
-        if (type == "position") {
+        if (type.equals("position")) {
             onClickApplyP(v);
-        } else if (type == "employer") {
+        } else if (type.equals("employer")) {
             onClickApplyE(v);
         } else { //type = tag
             onClickApplyT(v);
@@ -272,9 +277,9 @@ public void onClickApply(View v){
     }
     public void onJ4(View v){
         num = 4;
-        if (type == "position") {
+        if (type.equals("position")) {
             onClickApplyP(v);
-        } else if (type == "employer") {
+        } else if (type.equals("employer")) {
             onClickApplyE(v);
         } else { //type = tag
             onClickApplyT(v);
@@ -282,9 +287,9 @@ public void onClickApply(View v){
     }
     public void onJ5(View v){
         num = 5;
-        if (type == "position") {
+        if (type.equals("position")) {
             onClickApplyP(v);
-        } else if (type == "employer") {
+        } else if (type.equals("employer")) {
             onClickApplyE(v);
         } else { //type = tag
             onClickApplyT(v);
@@ -292,9 +297,9 @@ public void onClickApply(View v){
     }
     public void onJ6(View v){
         num = 6;
-        if (type == "position") {
+        if (type.equals("position")) {
             onClickApplyP(v);
-        } else if (type == "employer") {
+        } else if (type.equals("employer")) {
             onClickApplyE(v);
         } else { //type = tag
             onClickApplyT(v);
@@ -302,9 +307,9 @@ public void onClickApply(View v){
     }
     public void onJ7(View v){
         num = 7;
-        if (type == "position") {
+        if (type.equals("position")) {
             onClickApplyP(v);
-        } else if (type == "employer") {
+        } else if (type.equals("employer")) {
             onClickApplyE(v);
         } else { //type = tag
             onClickApplyT(v);
@@ -312,18 +317,18 @@ public void onClickApply(View v){
     }
     public void onJ8(View v){
         num = 8;
-        if (type == "position") {
+        if (type.equals("position")) {
             onClickApplyP(v);
-        } else if (type == "employer") {
+        } else if (type.equals("employer")) {
             onClickApplyE(v);
         } else { //type = tag
             onClickApplyT(v);
         }
     }
 public void onClickCancel(View v){
-    if (type == "position") {
+    if (type.equals("position")) {
         onClickAllResultsP(v);
-    } else if (type == "employer") {
+    } else if (type.equals("employer")) {
         onClickAllResultsE(v);
     } else { //type = tag
         onClickAllResultsT(v);
@@ -338,9 +343,9 @@ public void onOKAY(View v){
     Toast toast = Toast.makeText(context, text, duration);
     toast.show();
 
-    if (type == "position") {
+    if (type.equals("position")) {
         onClickAllResultsP(v);
-    } else if (type == "employer") {
+    } else if (type.equals("employer")) {
         onClickAllResultsE(v);
     } else { //type = tag
         onClickAllResultsT(v);
@@ -359,17 +364,20 @@ public void onOKAY(View v){
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items2);
         otherDocs.setAdapter(adapter2);
 
-        if (type == "position"){
+        if (type.equals("position")){
             final TextView viewing1 = (TextView) findViewById(R.id.textView6);
-            viewing1.setText("You are applying to Job" + num + " for " +job + " positon.");
+            String text = "You are applying to Job" + num + " for " +job + " positon.";
+            viewing1.setText(text);
 
-        } else if (type == "employer"){
+        } else if (type.equals("employer")){
             final TextView viewing1 = (TextView) findViewById(R.id.textView6);
-            viewing1.setText("You are applying to Job" + num+ " with " + employer +".");
+            String text = "You are applying to Job" + num+ " with " + employer +".";
+            viewing1.setText(text);
 
         }else{ //type == tag
             final TextView viewing1 = (TextView) findViewById(R.id.textView6);
-            viewing1.setText("You are applying to Job" +num + " with " + tags + " tags.");
+            String text = "You are applying to Job" +num + " with " + tags + " tags.";
+            viewing1.setText(text);
 
         }
     }

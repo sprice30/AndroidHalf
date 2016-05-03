@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".AddingJob"></activity>
         <activity android:name=".Employer"></activity>
+        <activity android:name=".ViewApplicants"></activity>
     </application>
 
 </manifest>
