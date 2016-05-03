@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.example.samprice.applytojob.R;
 
+import java.util.ArrayList;
+
 public class AddingJob extends AppCompatActivity {
     public EditText JT,JD,L,S;
 

@@ -323,20 +323,20 @@ public class MainActivity extends AppCompatActivity{ //implements OnItemSelected
             onClickApplyT(v);
         }
     }
-public void onClickCancel(View v){
-    if (type.equals("position")) {
+    public void onClickCancel(View v){
+        if (type.equals("position")) {
         onClickAllResultsP(v);
-    } else if (type.equals("employer")) {
+     } else if (type.equals("employer")) {
         onClickAllResultsE(v);
-    } else { //type = tag
+     } else { //type = tag
         onClickAllResultsT(v);
-    }
+     }
 }
 
-public void onOKAY(View v){
-    Context context = getApplicationContext();
-    CharSequence text = "Congratulations! You have sucessfully applied to Job"+ num ;
-    int duration = Toast.LENGTH_SHORT;
+    public void onOKAY(View v){
+        Context context = getApplicationContext();
+     CharSequence text = "Congratulations! You have sucessfully applied to Job"+ num ;
+     int duration = Toast.LENGTH_SHORT;
 
     Toast toast = Toast.makeText(context, text, duration);
     toast.show();
