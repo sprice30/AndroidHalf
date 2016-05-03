@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity{ //implements OnItemSelected
         setContentView(R.layout.activity_main);
     }
 
-public void onClickApply(View v){
+    public void onClickApply(View v){
     setContentView(R.layout.search);
 }
 
@@ -56,8 +56,8 @@ public void onClickApply(View v){
 
     */
     public void onClickEmployer(View v) {
-      Intent myIntent = new Intent(MainActivity.this, Employer.class);
-        startActivity(myIntent);
+        Intent myIntent = new Intent(MainActivity.this, Employer.class);
+       startActivity(myIntent);
     }
 
     public void onClickJobSeeker(View v) {
@@ -91,8 +91,6 @@ public void onClickApply(View v){
         final TextView viewing1 = (TextView) findViewById(R.id.textView24);
         viewing1.setText("Job with " + tags + " tags.");
     }
-
-
 
     public void onClickAllResultsP(View v){
         job = mSearch.getText().toString();

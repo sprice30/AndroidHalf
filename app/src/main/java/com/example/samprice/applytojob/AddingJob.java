@@ -20,23 +20,6 @@ public class AddingJob extends AppCompatActivity {
     public int back = -1;
 
 
-    public String getJob1(){
-        return title;
-    }
-
-    public String getJob2(){
-        return title2;
-    }
-
-    public String getJob3(){
-        return title3;
-    }
-
-    public String getJob4(){
-        return title4;
-    }
-
-
 
     public void onButtonClickPost(View v){
         JT = (EditText) findViewById(R.id.editTextjobTitle);
@@ -91,8 +74,6 @@ public class AddingJob extends AppCompatActivity {
             check4 = 1;
         }
 
-
-
         final TextView m1 = (TextView) findViewById(R.id.textViewpaste2);
         m1.setText(des);
         final TextView m2 = (TextView) findViewById(R.id.textViewpaste3);
@@ -109,6 +90,7 @@ public class AddingJob extends AppCompatActivity {
             else if(check2 == 1 && check3 == 0){
                 final TextView m = (TextView) findViewById(R.id.c1);
                 m.setText(title);
+
                 final TextView m2 = (TextView) findViewById(R.id.c2);
                 m2.setText(title2);
             }
@@ -119,7 +101,6 @@ public class AddingJob extends AppCompatActivity {
                 m2.setText(title2);
                 final TextView m3 = (TextView) findViewById(R.id.c3);
                 m3.setText(title3);
-
             }
             else{
                 final TextView m = (TextView) findViewById(R.id.c1);
@@ -133,7 +114,7 @@ public class AddingJob extends AppCompatActivity {
             }
         }
            public void onButtonClickBack(View v) {
-               /*  if (back == 1) {
+                 if (back == 1) {
                     title = "";
                 }
                 else if(back == 2){
@@ -144,7 +125,7 @@ public class AddingJob extends AppCompatActivity {
                 }
                 else{
                     title4 = "";
-                }*/
+                }
              setContentView(R.layout.paj1);
 
          }
@@ -195,8 +176,6 @@ public void onClickEmployer(View v){
         Intent myIntent = new Intent(AddingJob.this, MainActivity.class);
         startActivity(myIntent);
     }
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
