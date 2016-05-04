@@ -8,9 +8,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 
 public class Employer extends AppCompatActivity {
-    public String job1, job2, job3, job4;
+    public ArrayList<String> job1 = new ArrayList<String>();
+    ArrayList<String> dest = new ArrayList<String>();
+    ArrayList<String> location = new ArrayList<String>();
+    ArrayList<String> salary = new ArrayList<String>();
+
+    int currNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,34 +27,39 @@ public class Employer extends AppCompatActivity {
     }
     public void onJobPostStarted(View v){
         Intent myIntent = new Intent(Employer.this, AddingJob.class);
-        Bundle title = getIntent().getExtras();
-        job1 = title.getString("jobTitle1");
-        job2 = title.getString("jobTitle2");
-        job3 = title.getString("jobTitle3");
-        job4 = title.getString("jobTitle4");
+
+        Bundle titleList = getIntent().getExtras();
+        job1 = titleList.getStringArrayList("titleList");
+        dest = titleList.getStringArrayList("des");
+        location = titleList.getStringArrayList("loca");
+        salary = titleList.getStringArrayList("sal");
+       // currNum = titleList.getInt("Current");
 
         Bundle bundle = new Bundle();
-        bundle.putString("jobTitle1", job1);
-        bundle.putString("jobTitle2", job2);
-        bundle.putString("jobTitle3", job3);
-        bundle.putString("jobTitle4", job4);
+        bundle.putStringArrayList("titleList", job1);
+        bundle.putStringArrayList("des", dest);
+        bundle.putStringArrayList("loca", location);
+        bundle.putStringArrayList("sal", salary);
+       // bundle.putInt("Current", currNum);
         myIntent.putExtras(bundle);
+
         startActivity(myIntent);
     }
     public void onClickViewJobs(View v){
         Intent myIntent= new Intent(Employer.this, ViewApplicants.class);
-
-        Bundle title = getIntent().getExtras();
-        job1 = title.getString("jobTitle1");
-        job2 = title.getString("jobTitle2");
-        job3 = title.getString("jobTitle3");
-        job4 = title.getString("jobTitle4");
+        Bundle titleList = getIntent().getExtras();
+        job1 = titleList.getStringArrayList("titleList");
+        dest = titleList.getStringArrayList("des");
+        location = titleList.getStringArrayList("loca");
+        salary = titleList.getStringArrayList("sal");
+        // currNum = titleList.getInt("Current");
 
         Bundle bundle = new Bundle();
-        bundle.putString("jobTitle1", job1);
-        bundle.putString("jobTitle2", job2);
-        bundle.putString("jobTitle3", job3);
-        bundle.putString("jobTitle4", job4);
+        bundle.putStringArrayList("titleList", job1);
+        bundle.putStringArrayList("des", dest);
+        bundle.putStringArrayList("loca", location);
+        bundle.putStringArrayList("sal", salary);
+       // bundle.putInt("Current", currNum);
         myIntent.putExtras(bundle);
 
         startActivity(myIntent);

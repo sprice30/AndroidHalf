@@ -57,7 +57,7 @@
             android:layout_height="85dp"
             android:text="Manage Resume(s)"
             android:id="@+id/button3"
-            android:onClick="onClickManage"
+            android:onClick="onManage"
             android:layout_row="0"
             android:layout_column="1" />
     </GridLayout>
@@ -66,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="Apply for Job"
-        android:onClick="onClickApply"
+        android:onClick="onClickApply2"
         android:id="@+id/button"
         android:layout_row="1"
         android:layout_column="1"
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:text="Back"
         android:id="@+id/button15"
-        android:onClick="onClickActMain"
+        android:onClick="onClickMain"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

@@ -21,7 +21,11 @@ public class ViewApplicants extends AppCompatActivity {
    String jobSelected, job1, job2,job3,job4, num;
     String num1, num2, num3, num4, num5;
     TextView t1, t2, t3, t4, j1, j2, j3, j4, j5;
-
+ArrayList<String> jobs = new ArrayList<String>();
+    ArrayList<String> dest = new ArrayList<String>();
+    ArrayList<String> location = new ArrayList<String>();
+    ArrayList<String> salary = new ArrayList<String>();
+    int curr;
 
 
     @Override
@@ -38,26 +42,36 @@ public class ViewApplicants extends AppCompatActivity {
 
     public void viewJobsPosted(){
 
-      Bundle title = getIntent().getExtras();
-        job1 = title.getString("jobTitle1");
-        job2 = title.getString("jobTitle2");
-        job3 = title.getString("jobTitle3");
-        job4 = title.getString("jobTitle4");
+        Bundle titleList = getIntent().getExtras();
+        jobs = titleList.getStringArrayList("titleList");
+        dest = titleList.getStringArrayList("des");
+        location = titleList.getStringArrayList("loca");
+        salary = titleList.getStringArrayList("sal");
+
+
+        if (jobs.size()>0){
+        job1 = jobs.get(0);
+        } else{
+            job1 = "";
+        }
+        if (jobs.size()>1){
+            job2 = jobs.get(1);
+        } else{
+            job2 = "";
+        }
+        if (jobs.size()>2){
+            job3 = jobs.get(2);
+        } else{
+            job3 = "";
+        }
+        if (jobs.size()>3){
+            job4 = jobs.get(3);
+        } else{
+            job4 = "";
+        }
 
         setContentView(R.layout.view1);
 
-        if (job1 == null){
-            job1 = "";
-        }
-        if (job2 == null){
-            job2 = "";
-        }
-        if (job3 == null){
-            job3 = "";
-        }
-        if (job4 == null){
-            job4 = "";
-        }
 
 
         final Spinner jobsPosted = (Spinner) findViewById(R.id.spinner1);
@@ -86,10 +100,11 @@ public class ViewApplicants extends AppCompatActivity {
 public void onClickCancel(View v){
     Intent myIntent = new Intent(ViewApplicants.this, Employer.class);
     Bundle bundle = new Bundle();
-    bundle.putString("jobTitle1", job1);
-    bundle.putString("jobTitle2", job2);
-    bundle.putString("jobTitle3", job3);
-    bundle.putString("jobTitle4", job4);
+    bundle.putStringArrayList("titleList", jobs);
+    bundle.putStringArrayList("des", dest);
+    bundle.putStringArrayList("loca", location);
+    bundle.putStringArrayList("sal", salary);
+    //bundle.putInt("Current", curr);
     myIntent.putExtras(bundle);
 
     startActivity(myIntent);
@@ -143,7 +158,7 @@ public void onClickBack3(View v){
         setContentView(R.layout.view2);
 
         final TextView viewing1 = (TextView) findViewById(R.id.textView40);
-        String text = "Viewing Applicants for " + jobSelected + "Job.";
+        String text = "Viewing Applicants for " + jobSelected + " Job.";
 
         viewing1.setText(text);
         num1 =String.valueOf(rando()) ;

@@ -345,7 +345,7 @@ public class Resume extends AppCompatActivity {
     }
 
     public void onClickJobSeeker1(View v){
-        Intent myIntent = new Intent(Resume.this, MainActivity.class);
+        Intent myIntent = new Intent(Resume.this, JobSeeker.class);
         startActivity(myIntent);
 
     }

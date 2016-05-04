@@ -153,7 +153,7 @@
         android:layout_height="wrap_content"
         android:text="Back"
         android:id="@+id/button15"
-        android:onClick="onClickEmployer"
+        android:onClick="onClickEmployer1"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
