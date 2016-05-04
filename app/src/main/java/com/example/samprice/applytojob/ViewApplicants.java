@@ -15,6 +15,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Random;
 
 public class ViewApplicants extends AppCompatActivity {
    String jobSelected, idSelected, job1, job2,job3, job4, num;
@@ -116,18 +117,22 @@ public void onClickCancel(View v){
         viewing1.setText(text);
 
         final TextView job1 = (TextView) findViewById(R.id.button21);
-        job1.setText("23457");
+        job1.setText(String.valueOf(rando()));
         final TextView job2 = (TextView) findViewById(R.id.button22);
-        job2.setText("97453");
+        job2.setText(String.valueOf(rando()));
         final TextView job3 = (TextView) findViewById(R.id.button23);
-        job3.setText("23098");
+        job3.setText(String.valueOf(rando()));
         final TextView job4 = (TextView) findViewById(R.id.button24);
-        job4.setText("98604");
+        job4.setText(String.valueOf(rando()));
         final TextView job5 = (TextView) findViewById(R.id.button25);
-        job5.setText("17742");
+        job5.setText(String.valueOf(rando()));
 
+    }
 
+    public int rando(){
+        int randomNumber = new Random().nextInt(9000) + 1000;
 
+        return randomNumber;
     }
 
     public void onClickNum(){
@@ -191,14 +196,21 @@ public void onClickCancel(View v){
 
     public void onClickViewResume(View v){
         setContentView(R.layout.view_res);
+
+        final TextView viewing1 = (TextView) findViewById(R.id.textView42);
+        viewing1.setText("Viewing Resume for " + num + ".");
     }
 
     public void onClickViewOther(View v){
         setContentView(R.layout.view_other);
+        final TextView viewing1 = (TextView) findViewById(R.id.textView44);
+        viewing1.setText("Viewing Other Documents for " + num + ".");
     }
 
     public void onClickViewTags(View v){
         setContentView(R.layout.view_tags);
+        final TextView viewing1 = (TextView) findViewById(R.id.textView45);
+        viewing1.setText("Viewing Matching Tags for " + num + ".");
     }
 
 

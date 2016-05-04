@@ -57,7 +57,7 @@
             android:layout_height="85dp"
             android:text="Resume"
             android:id="@+id/button27"
-            android:onClick="onClickViewOther"
+            android:onClick="onClickViewResume"
             android:layout_row="0"
             android:layout_column="1" />
 
