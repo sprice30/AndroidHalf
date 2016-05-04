@@ -40,6 +40,13 @@ public class MainActivity extends AppCompatActivity{ //implements OnItemSelected
     setContentView(R.layout.search);
 }
 
+    public void onClickManage(View v){
+        Intent myIntent = new Intent(MainActivity.this, Resume.class);
+        startActivity(myIntent);
+
+    }
+
+
     public void onClickEmployer(View v) {
         Intent myIntent = new Intent(MainActivity.this, Employer.class);
         Bundle bundle = new Bundle();
