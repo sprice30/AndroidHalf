@@ -46,6 +46,18 @@ public class ViewApplicants extends AppCompatActivity {
 
         setContentView(R.layout.view1);
 
+        if (job1 == null){
+            job1 = "";
+        }
+        if (job2 == null){
+            job2 = "";
+        }
+        if (job3 == null){
+            job3 = "";
+        }
+        if (job4 == null){
+            job4 = "";
+        }
 
 
         final Spinner jobsPosted = (Spinner) findViewById(R.id.spinner1);
