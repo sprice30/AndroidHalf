@@ -39,12 +39,6 @@ public class AddingJob extends AppCompatActivity {
         salary.add(S.getText().toString());
         setContentView(R.layout.paj2);
 
-
-
-
-        Toast myToast = Toast.makeText(getApplicationContext(),String.valueOf(current) , Toast.LENGTH_LONG);
-        myToast.show();
-
         if(current == 0) {
             final TextView m = (TextView) findViewById(R.id.textViewpaste);
             m.setText(" " + title.get(0));
