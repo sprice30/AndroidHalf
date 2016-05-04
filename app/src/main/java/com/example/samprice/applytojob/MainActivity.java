@@ -40,23 +40,14 @@ public class MainActivity extends AppCompatActivity{ //implements OnItemSelected
     setContentView(R.layout.search);
 }
 
-    //public void onClickUpload(View v){
-    //  setContentView(R.layout.);
-    //}
-
-  /*  public void onJobPostStart(View v){
-        Intent myIntent = new Intent(MainActivity.this, AddingJob.class);
-        startActivity(myIntent);
-    }
-
-    public void onClickView(View v) {
-    Intent myIntent = new Intent(MainActivity.this, ViewApplicants.class);
-        startActivity(myIntent);
-    }
-
-    */
     public void onClickEmployer(View v) {
         Intent myIntent = new Intent(MainActivity.this, Employer.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("jobTitle1", null);
+        bundle.putString("jobTitle2", null);
+        bundle.putString("jobTitle3", null);
+        bundle.putString("jobTitle4", null);
+        myIntent.putExtras(bundle);
        startActivity(myIntent);
     }
 

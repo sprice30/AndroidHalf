@@ -37,18 +37,12 @@ public class ViewApplicants extends AppCompatActivity {
 
 
     public void viewJobsPosted(){
-        setContentView(R.layout.paj3);
-        t1 = (TextView) findViewById(R.id.c1);
-        t2 = (TextView) findViewById(R.id.c2);
-        t3 = (TextView) findViewById(R.id.c3);
-        t4 = (TextView) findViewById(R.id.c4);
 
-        t1.setText("Hello");
-
-        job1 = t1.getText().toString();
-        job2 = t2.getText().toString();
-        job3 = t3.getText().toString();
-        job4 = t4.getText().toString();
+      Bundle title = getIntent().getExtras();
+        job1 = title.getString("jobTitle1");
+        job2 = title.getString("jobTitle2");
+        job3 = title.getString("jobTitle3");
+        job4 = title.getString("jobTitle4");
 
         setContentView(R.layout.view1);
 
@@ -79,6 +73,13 @@ public class ViewApplicants extends AppCompatActivity {
 
 public void onClickCancel(View v){
     Intent myIntent = new Intent(ViewApplicants.this, Employer.class);
+    Bundle bundle = new Bundle();
+    bundle.putString("jobTitle1", job1);
+    bundle.putString("jobTitle2", job2);
+    bundle.putString("jobTitle3", job3);
+    bundle.putString("jobTitle4", job4);
+    myIntent.putExtras(bundle);
+
     startActivity(myIntent);
 
 }

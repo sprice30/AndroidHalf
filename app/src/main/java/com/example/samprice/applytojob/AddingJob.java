@@ -28,17 +28,24 @@ public class AddingJob extends AppCompatActivity {
         JD = (EditText) findViewById(R.id.editTextDes);
         L = (EditText) findViewById(R.id.editTextLoc);
         S = (EditText) findViewById(R.id.editTextSal);
-        if(title == "") {
+
+        Bundle titles = getIntent().getExtras();
+        title = titles.getString("jobTitle1");
+        title2 = titles.getString("jobTitle2");
+        title3 = titles.getString("jobTitle3");
+        title4 = titles.getString("jobTitle4");
+
+        if(title == null) {
             title = JT.getText().toString();
             back = 1;
             one = 1;
         }
-        else if(title2 == ""){
+        else if(title2 == null){
             title2 = JT.getText().toString();
             back =2;
             two = 1;
         }
-        else if(title3 == ""){
+        else if(title3 == null){
             back = 3;
             title3 = JT.getText().toString();
             three = 1;
@@ -52,7 +59,6 @@ public class AddingJob extends AppCompatActivity {
         des = JD.getText().toString();
         loc = L.getText().toString();
         sal = S.getText().toString();
-
 
         setContentView(R.layout.paj2);
         if(one == 1 && two == 0) {
@@ -85,6 +91,8 @@ public class AddingJob extends AppCompatActivity {
         }
         public void onButtonClickConfirm(View v) {
             setContentView(R.layout.paj3);
+
+
             if(check == 1 && check2 == 0) {
                 final TextView m = (TextView) findViewById(R.id.c1);
                 m.setText(title);
@@ -116,7 +124,7 @@ public class AddingJob extends AppCompatActivity {
             }
         }
            public void onButtonClickBack(View v) {
-                 if (back == 1) {
+             /*    if (back == 1) {
                     title = "";
                 }
                 else if(back == 2){
@@ -127,7 +135,7 @@ public class AddingJob extends AppCompatActivity {
                 }
                 else{
                     title4 = "";
-                }
+                }*/
              setContentView(R.layout.paj1);
 
          }
@@ -170,8 +178,14 @@ public class AddingJob extends AppCompatActivity {
             check4 = 0;
         }
 
-public void onClickEmployer(View v){
+public void onClickEmployer1(View v){
     Intent myIntent = new Intent(AddingJob.this, Employer.class);
+    Bundle bundle = new Bundle();
+    bundle.putString("jobTitle1", title);
+    bundle.putString("jobTitle2", title2);
+    bundle.putString("jobTitle3", title3);
+    bundle.putString("jobTitle4", title4);
+     myIntent.putExtras(bundle);
     startActivity(myIntent);
 }
     public void onClickActMain(View v){
@@ -179,10 +193,15 @@ public void onClickEmployer(View v){
         startActivity(myIntent);
     }
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.paj1);
+
+
 
     }
 
