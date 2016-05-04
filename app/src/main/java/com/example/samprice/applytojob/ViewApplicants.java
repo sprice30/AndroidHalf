@@ -18,8 +18,9 @@ import java.util.Objects;
 import java.util.Random;
 
 public class ViewApplicants extends AppCompatActivity {
-   String jobSelected, idSelected, job1, job2,job3, job4, num;
-    TextView t1, t2, t3, t4;
+   String jobSelected, job1, job2,job3,job4, num;
+    String num1, num2, num3, num4, num5;
+    TextView t1, t2, t3, t4, j1, j2, j3, j4, j5;
 
 
 
@@ -73,8 +74,6 @@ public class ViewApplicants extends AppCompatActivity {
             }
         });
 
-
-
     }
 
 
@@ -107,25 +106,50 @@ public void onClickCancel(View v){
         });
     }
 
+public void onClickBack3(View v){
+    setContentView(R.layout.view2);
+
+    final TextView viewing1 = (TextView) findViewById(R.id.textView40);
+    String text = "Viewing Applicants for " + jobSelected + " Job.";
+    viewing1.setText(text);
+
+    final TextView job1 = (TextView) findViewById(R.id.button21);
+    job1.setText("ID: " +num1);
+    final TextView job2 = (TextView) findViewById(R.id.button22);
+    job2.setText("ID: " +num2);
+    final TextView job3 = (TextView) findViewById(R.id.button23);
+    job3.setText("ID: " +num3);
+    final TextView job4 = (TextView) findViewById(R.id.button24);
+    job4.setText("ID: " +num4);
+    final TextView job5 = (TextView) findViewById(R.id.button25);
+    job5.setText("ID: " +num5);
+
+}
 
     public void onClickApplicants(View v){
         setContentView(R.layout.view2);
 
         final TextView viewing1 = (TextView) findViewById(R.id.textView40);
-        String text = "Viewing " + jobSelected + " job.";
+        String text = "Viewing Applicants for " + jobSelected + "Job.";
 
         viewing1.setText(text);
+        num1 =String.valueOf(rando()) ;
+        num2 =String.valueOf(rando()) ;
+        num3= String.valueOf(rando());
+        num4 =String.valueOf(rando()) ;
+        num5 = String.valueOf(rando());
+
 
         final TextView job1 = (TextView) findViewById(R.id.button21);
-        job1.setText(String.valueOf(rando()));
+        job1.setText("ID: " + num1);
         final TextView job2 = (TextView) findViewById(R.id.button22);
-        job2.setText(String.valueOf(rando()));
+        job2.setText("ID: " +num2);
         final TextView job3 = (TextView) findViewById(R.id.button23);
-        job3.setText(String.valueOf(rando()));
+        job3.setText("ID: " +num3);
         final TextView job4 = (TextView) findViewById(R.id.button24);
-        job4.setText(String.valueOf(rando()));
+        job4.setText("ID: " +num4);
         final TextView job5 = (TextView) findViewById(R.id.button25);
-        job5.setText(String.valueOf(rando()));
+        job5.setText("ID: " +num5);
 
     }
 
@@ -137,66 +161,40 @@ public void onClickCancel(View v){
 
     public void onClickNum(){
         setContentView(R.layout.view3);
-
         final TextView viewing1 = (TextView) findViewById(R.id.textView41);
         viewing1.setText("Viewing Applicant " + num + ".");
     }
 
 
     public void onClickNum1(View v){
-        num = "23457";
+        j1 = (TextView) findViewById(R.id.button21);
+        num = j1.getText().toString();
         onClickNum();
-
-       // final TextView viewing1 = (TextView) findViewById(R.id.textView41);
-        //viewing1.setText("Viewing Applicant " + idSelected + ".");
-
-
     }
 
     public void onClickNum2(View v){
-       // setContentView(R.layout.view3);
-        num = "97453";
+        j2 = (TextView) findViewById(R.id.button22);
+        num = j2.getText().toString();
         onClickNum();
-
-      //  final TextView viewing1 = (TextView) findViewById(R.id.textView41);
-        //viewing1.setText("Viewing Applicant " + idSelected + ".");
-
-
     }
     public void onClickNum3(View v){
-     //   setContentView(R.layout.view3);
-        num = "23098";
+        j3 = (TextView) findViewById(R.id.button23);
+        num = j3.getText().toString();
         onClickNum();
-
-       // final TextView viewing1 = (TextView) findViewById(R.id.textView41);
-        //viewing1.setText("Viewing Applicant " + idSelected + ".");
-
-
     }
     public void onClickNum4(View v){
-       // setContentView(R.layout.view3);
-        num = "98604";
+        j4 = (TextView) findViewById(R.id.button24);
+        num = j4.getText().toString();
         onClickNum();
-
-        //final TextView viewing1 = (TextView) findViewById(R.id.textView41);
-        //viewing1.setText("Viewing Applicant " + idSelected + ".");
-
-
     }
     public void onClickNum5(View v){
-       // setContentView(R.layout.view3);
-        num = "17742";
-
+        j5 = (TextView) findViewById(R.id.button25);
+        num = j5.getText().toString();
         onClickNum();
-       // final TextView viewing1 = (TextView) findViewById(R.id.textView41);
-        //viewing1.setText("Viewing Applicant " + idSelected + ".");
-
-
     }
 
     public void onClickViewResume(View v){
         setContentView(R.layout.view_res);
-
         final TextView viewing1 = (TextView) findViewById(R.id.textView42);
         viewing1.setText("Viewing Resume for " + num + ".");
     }
@@ -216,7 +214,7 @@ public void onClickCancel(View v){
 
 
     public void onClickBack2(View v){
-        setContentView(R.layout.view3);
+        onClickNum();
 
     }
 

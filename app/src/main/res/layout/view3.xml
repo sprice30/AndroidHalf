@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="Back"
         android:id="@+id/button16"
-        android:onClick="onClickBack"
+        android:onClick="onClickBack3"
         android:layout_row="31"
         android:layout_column="0"
         android:layout_alignParentBottom="true"
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
+            android:text="Viewing Applicant"
             android:id="@+id/textView41"
             android:layout_row="0"
             android:layout_column="0" />

@@ -38,5 +38,13 @@
             android:id="@+id/textView45"
             android:layout_row="0"
             android:layout_column="0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3"
+            android:src="@drawable/tag"
+            android:layout_row="1"
+            android:layout_column="0" />
     </GridLayout>
 </RelativeLayout>

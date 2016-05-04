@@ -24,6 +24,14 @@
             android:id="@+id/textView42"
             android:layout_row="0"
             android:layout_column="0" />
+
+        <ImageView
+            android:layout_width="318dp"
+            android:layout_height="433dp"
+            android:id="@+id/imageView"
+            android:layout_row="1"
+            android:src="@drawable/res"
+            android:layout_column="0" />
     </GridLayout>
 
 
