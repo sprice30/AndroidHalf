@@ -2,6 +2,7 @@ package com.example.samprice.applytojob;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -24,13 +25,24 @@ public class JobSeeker extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.jobseeker);
+        TextView myText = (TextView) findViewById(R.id.textView);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myText1 = (TextView) findViewById(R.id.button);
+        TextView myText2 = (TextView) findViewById(R.id.button3);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button15);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/green avocado.ttf");
+        myTextBack.setTypeface(myFont3);
 
     }
 
     public void onManage(View v){
-
         Intent myIntent = new Intent(JobSeeker.this, Resume.class);
-
         startActivity(myIntent);
     }
 
@@ -41,7 +53,23 @@ public class JobSeeker extends AppCompatActivity {
 
     public void onClickApply2(View v){
 
-        setContentView(R.layout.search);
+        setContentView(R.layout.search2);
+        TextView myText = (TextView) findViewById(R.id.textView47);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myText1 = (TextView) findViewById(R.id.editPosition);
+        TextView myText2 = (TextView) findViewById(R.id.editEmployer);
+        TextView myText3 = (TextView) findViewById(R.id.editTags);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+        myText3.setTypeface(myFont2);
+
+
+        TextView myTextBack = (TextView) findViewById(R.id.button18);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/green avocado.ttf");
+        myTextBack.setTypeface(myFont3);
 
     }
     public void onClickApplyP(View v) {
@@ -71,8 +99,38 @@ public class JobSeeker extends AppCompatActivity {
     public void onClickAllResultsP(View v){
         job = mSearch.getText().toString();
         setContentView(R.layout.select);
+
+        TextView myText = (TextView) findViewById(R.id.textView4);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+
+        TextView myTextBack = (TextView) findViewById(R.id.button3);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/green avocado.ttf");
+        myTextBack.setTypeface(myFont3);
+
         final TextView viewing1 = (TextView) findViewById(R.id.textView4);
         viewing1.setText("Found 8 " + job + " positions.");
+
+        TextView myText1 = (TextView) findViewById(R.id.buttonjob1);
+        TextView myText2 = (TextView) findViewById(R.id.buttonjob2);
+        TextView myText3 = (TextView) findViewById(R.id.buttonjob3);
+        TextView myText4 = (TextView) findViewById(R.id.buttonjob4);
+        TextView myText5 = (TextView) findViewById(R.id.buttonjob5);
+        TextView myText6 = (TextView) findViewById(R.id.buttonjob6);
+        TextView myText7 = (TextView) findViewById(R.id.buttonjob7);
+        TextView myText8 = (TextView) findViewById(R.id.buttonjob8);
+
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+        myText3.setTypeface(myFont2);
+        myText4.setTypeface(myFont2);
+        myText5.setTypeface(myFont2);
+        myText6.setTypeface(myFont2);
+        myText7.setTypeface(myFont2);
+        myText8.setTypeface(myFont2);
+
         final TextView job1 = (TextView) findViewById(R.id.buttonjob1);
         job1.setText("Job1 for " + job + " position");
         final TextView job2 = (TextView) findViewById(R.id.buttonjob2);
@@ -90,13 +148,43 @@ public class JobSeeker extends AppCompatActivity {
         final TextView job8 = (TextView) findViewById(R.id.buttonjob8);
         job8.setText("Job8 for " + job + " position");
 
+
     }
     public void onClickAllResultsE(View v){
 
         employer = mEmployer.getText().toString();
         setContentView(R.layout.select_employer);
+
+        TextView myText = (TextView) findViewById(R.id.textView4);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button3);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/green avocado.ttf");
+        myTextBack.setTypeface(myFont3);
+
         final TextView viewing1 = (TextView) findViewById(R.id.textView4);
         viewing1.setText("Found 8 jobs with the " + employer + " company.");
+
+        TextView myText1 = (TextView) findViewById(R.id.buttonjob1);
+        TextView myText2 = (TextView) findViewById(R.id.buttonjob2);
+        TextView myText3 = (TextView) findViewById(R.id.buttonjob3);
+        TextView myText4 = (TextView) findViewById(R.id.buttonjob4);
+        TextView myText5 = (TextView) findViewById(R.id.buttonjob5);
+        TextView myText6 = (TextView) findViewById(R.id.buttonjob6);
+        TextView myText7 = (TextView) findViewById(R.id.buttonjob7);
+        TextView myText8 = (TextView) findViewById(R.id.buttonjob8);
+
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+        myText3.setTypeface(myFont2);
+        myText4.setTypeface(myFont2);
+        myText5.setTypeface(myFont2);
+        myText6.setTypeface(myFont2);
+        myText7.setTypeface(myFont2);
+        myText8.setTypeface(myFont2);
+
         final TextView job1 = (TextView) findViewById(R.id.buttonjob1);
         job1.setText("Job1 with " + employer );
         final TextView job2 = (TextView) findViewById(R.id.buttonjob2);
@@ -113,15 +201,44 @@ public class JobSeeker extends AppCompatActivity {
         job7.setText("Job7 with " + employer  );
         final TextView job8 = (TextView) findViewById(R.id.buttonjob8);
         job8.setText("Job8 with " + employer);
+
+
     }
 
     public void onClickAllResultsT(View v){
         tags = mTag.getText().toString();
         setContentView(R.layout.select_tags);
 
+        TextView myText = (TextView) findViewById(R.id.textView4);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button3);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/green avocado.ttf");
+        myTextBack.setTypeface(myFont3);
 
         final TextView viewing1 = (TextView) findViewById(R.id.textView4);
         viewing1.setText("Found 8 positions with " + tags + " tags.");
+
+        TextView myText1 = (TextView) findViewById(R.id.buttonjob1);
+        TextView myText2 = (TextView) findViewById(R.id.buttonjob2);
+        TextView myText3 = (TextView) findViewById(R.id.buttonjob3);
+        TextView myText4 = (TextView) findViewById(R.id.buttonjob4);
+        TextView myText5 = (TextView) findViewById(R.id.buttonjob5);
+        TextView myText6 = (TextView) findViewById(R.id.buttonjob6);
+        TextView myText7 = (TextView) findViewById(R.id.buttonjob7);
+        TextView myText8 = (TextView) findViewById(R.id.buttonjob8);
+
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+        myText3.setTypeface(myFont2);
+        myText4.setTypeface(myFont2);
+        myText5.setTypeface(myFont2);
+        myText6.setTypeface(myFont2);
+        myText7.setTypeface(myFont2);
+        myText8.setTypeface(myFont2);
+
         final TextView job1 = (TextView) findViewById(R.id.buttonjob1);
         job1.setText("Job1 with " + tags + " tags");
         final TextView job2 = (TextView) findViewById(R.id.buttonjob2);
@@ -137,11 +254,31 @@ public class JobSeeker extends AppCompatActivity {
         final TextView job7 = (TextView) findViewById(R.id.buttonjob7);
         job7.setText("Job7 with " + tags+ " tags");
         final TextView job8 = (TextView) findViewById(R.id.buttonjob8);
-        job8.setText("Job8 with " + tags+ " tags");
+        job8.setText("Job8 with " + tags + " tags");
+
+
     }
 
     public void onClickReturntoSearch(View v){
-        setContentView(R.layout.search);
+
+        setContentView(R.layout.search2);
+        TextView myText = (TextView) findViewById(R.id.textView47);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myText1 = (TextView) findViewById(R.id.editPosition);
+        TextView myText2 = (TextView) findViewById(R.id.editEmployer);
+        TextView myText3 = (TextView) findViewById(R.id.editTags);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+        myText3.setTypeface(myFont2);
+
+
+        TextView myTextBack = (TextView) findViewById(R.id.button18);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/green avocado.ttf");
+        myTextBack.setTypeface(myFont3);
+
     }
 
     public void onClickByPosition(View v) {
@@ -149,8 +286,36 @@ public class JobSeeker extends AppCompatActivity {
         job = mSearch.getText().toString();
         type = "position";
         setContentView(R.layout.select);
+        TextView myText = (TextView) findViewById(R.id.textView4);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button3);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/green avocado.ttf");
+        myTextBack.setTypeface(myFont3);
+
         final TextView viewing1 = (TextView) findViewById(R.id.textView4);
         viewing1.setText("Found 8 " + job + " positions.");
+
+        TextView myText1 = (TextView) findViewById(R.id.buttonjob1);
+        TextView myText2 = (TextView) findViewById(R.id.buttonjob2);
+        TextView myText3 = (TextView) findViewById(R.id.buttonjob3);
+        TextView myText4 = (TextView) findViewById(R.id.buttonjob4);
+        TextView myText5 = (TextView) findViewById(R.id.buttonjob5);
+        TextView myText6 = (TextView) findViewById(R.id.buttonjob6);
+        TextView myText7 = (TextView) findViewById(R.id.buttonjob7);
+        TextView myText8 = (TextView) findViewById(R.id.buttonjob8);
+
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+        myText3.setTypeface(myFont2);
+        myText4.setTypeface(myFont2);
+        myText5.setTypeface(myFont2);
+        myText6.setTypeface(myFont2);
+        myText7.setTypeface(myFont2);
+        myText8.setTypeface(myFont2);
+
         final TextView job1 = (TextView) findViewById(R.id.buttonjob1);
         job1.setText("Job1 for " + job + " position");
         final TextView job2 = (TextView) findViewById(R.id.buttonjob2);
@@ -175,8 +340,36 @@ public class JobSeeker extends AppCompatActivity {
         employer = mEmployer.getText().toString();
         type = "employer";
         setContentView(R.layout.select_employer);
+        TextView myText = (TextView) findViewById(R.id.textView4);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button3);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/green avocado.ttf");
+        myTextBack.setTypeface(myFont3);
+
         final TextView viewing1 = (TextView) findViewById(R.id.textView4);
         viewing1.setText("Found 8 jobs with the " + employer + " company.");
+
+        TextView myText1 = (TextView) findViewById(R.id.buttonjob1);
+        TextView myText2 = (TextView) findViewById(R.id.buttonjob2);
+        TextView myText3 = (TextView) findViewById(R.id.buttonjob3);
+        TextView myText4 = (TextView) findViewById(R.id.buttonjob4);
+        TextView myText5 = (TextView) findViewById(R.id.buttonjob5);
+        TextView myText6 = (TextView) findViewById(R.id.buttonjob6);
+        TextView myText7 = (TextView) findViewById(R.id.buttonjob7);
+        TextView myText8 = (TextView) findViewById(R.id.buttonjob8);
+
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+        myText3.setTypeface(myFont2);
+        myText4.setTypeface(myFont2);
+        myText5.setTypeface(myFont2);
+        myText6.setTypeface(myFont2);
+        myText7.setTypeface(myFont2);
+        myText8.setTypeface(myFont2);
+
         final TextView job1 = (TextView) findViewById(R.id.buttonjob1);
         job1.setText("Job1 with " + employer );
         final TextView job2 = (TextView) findViewById(R.id.buttonjob2);
@@ -200,8 +393,36 @@ public class JobSeeker extends AppCompatActivity {
         tags = mTag.getText().toString();
         setContentView(R.layout.select_tags);
         type = "tag";
+        TextView myText = (TextView) findViewById(R.id.textView4);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button3);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/green avocado.ttf");
+        myTextBack.setTypeface(myFont3);
+
         final TextView viewing1 = (TextView) findViewById(R.id.textView4);
         viewing1.setText("Found 8 positions with " + tags + " tags.");
+
+        TextView myText1 = (TextView) findViewById(R.id.buttonjob1);
+        TextView myText2 = (TextView) findViewById(R.id.buttonjob2);
+        TextView myText3 = (TextView) findViewById(R.id.buttonjob3);
+        TextView myText4 = (TextView) findViewById(R.id.buttonjob4);
+        TextView myText5 = (TextView) findViewById(R.id.buttonjob5);
+        TextView myText6 = (TextView) findViewById(R.id.buttonjob6);
+        TextView myText7 = (TextView) findViewById(R.id.buttonjob7);
+        TextView myText8 = (TextView) findViewById(R.id.buttonjob8);
+
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+        myText3.setTypeface(myFont2);
+        myText4.setTypeface(myFont2);
+        myText5.setTypeface(myFont2);
+        myText6.setTypeface(myFont2);
+        myText7.setTypeface(myFont2);
+        myText8.setTypeface(myFont2);
+
         final TextView job1 = (TextView) findViewById(R.id.buttonjob1);
         job1.setText("Job1 with " + tags + " tags");
         final TextView job2 = (TextView) findViewById(R.id.buttonjob2);
@@ -367,6 +588,19 @@ public void onClickUploadRes(View v){
 
     public void onClickJobSeeker(View v){
         setContentView(R.layout.jobseeker);
+        TextView myText = (TextView) findViewById(R.id.textView);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myText1 = (TextView) findViewById(R.id.button);
+        TextView myText2 = (TextView) findViewById(R.id.button3);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button15);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/green avocado.ttf");
+        myTextBack.setTypeface(myFont3);
     }
 
 }

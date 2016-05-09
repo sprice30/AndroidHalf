@@ -1,12 +1,14 @@
 package com.example.samprice.applytojob;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -24,6 +26,20 @@ public class Employer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.employer2);
+
+        TextView myText = (TextView) findViewById(R.id.textView);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myTextJob = (TextView) findViewById(R.id.button);
+        TextView myTextEmpl = (TextView) findViewById(R.id.button2);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myTextJob.setTypeface(myFont2);
+        myTextEmpl.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button15);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/green avocado.ttf");
+        myTextBack.setTypeface(myFont3);
     }
     public void onJobPostStarted(View v){
         Intent myIntent = new Intent(Employer.this, AddingJob.class);
