@@ -152,6 +152,8 @@
         android:layout_width="110dp"
         android:layout_height="90dp"
         android:text="Post New Resume"
+        android:background="@color/text"
+        android:textColor="@color/black"
         android:id="@+id/button8"
         android:onClick="onClickResumePost"
         android:layout_alignParentBottom="true"

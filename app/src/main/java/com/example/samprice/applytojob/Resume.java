@@ -138,7 +138,7 @@ public class Resume extends AppCompatActivity {
     public void onClickPickBack(View v) {
         setContentView(R.layout.resume_view);
 
-        TextView myText = (TextView) findViewById(R.id.textView15);
+        TextView myText = (TextView) findViewById(R.id.textView52);
         Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
         myText.setTypeface(myFont);
 

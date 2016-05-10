@@ -1,6 +1,7 @@
 package com.example.samprice.applytojob;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +39,34 @@ public class AddingJob extends AppCompatActivity {
         location.add(JD.getText().toString());
         salary.add(S.getText().toString());
         setContentView(R.layout.paj2);
+
+        TextView myText = (TextView) findViewById(R.id.textView);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myTitle = (TextView) findViewById(R.id.textView2);
+        TextView myTitle2 = (TextView) findViewById(R.id.textViewpaste);
+        TextView myDes = (TextView) findViewById(R.id.textView3);
+        TextView myDes2 = (TextView) findViewById(R.id.textViewpaste2);
+        TextView myLoca = (TextView) findViewById(R.id.textView4);
+        TextView myLoca2 = (TextView) findViewById(R.id.textViewpaste3);
+        TextView mySal = (TextView) findViewById(R.id.textView53);
+        TextView mySal2 = (TextView) findViewById(R.id.textViewpaste4);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myTitle.setTypeface(myFont2);
+        myTitle2.setTypeface(myFont2);
+        myDes.setTypeface(myFont2);
+        myDes2.setTypeface(myFont2);
+        myLoca.setTypeface(myFont2);
+        myLoca2.setTypeface(myFont2);
+        mySal.setTypeface(myFont2);
+        mySal2.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button2);
+        TextView myTextPost = (TextView) findViewById(R.id.button3);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+        myTextBack.setTypeface(myFont3);
+        myTextPost.setTypeface(myFont3);
 
         if(current == 0) {
             final TextView m = (TextView) findViewById(R.id.textViewpaste);
@@ -105,6 +134,35 @@ public class AddingJob extends AppCompatActivity {
 
     public void onButtonClickConfirm(View v) {
         setContentView(R.layout.paj3);
+
+        TextView myText = (TextView) findViewById(R.id.textView);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myTitle = (TextView) findViewById(R.id.c1);
+        TextView myTitle2 = (TextView) findViewById(R.id.button4);
+        TextView myDes = (TextView) findViewById(R.id.c2);
+        TextView myDes2 = (TextView) findViewById(R.id.button5);
+        TextView myLoca = (TextView) findViewById(R.id.c3);
+        TextView myLoca2 = (TextView) findViewById(R.id.button6);
+        TextView mySal = (TextView) findViewById(R.id.c4);
+        TextView mySal2 = (TextView) findViewById(R.id.button7);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myTitle.setTypeface(myFont2);
+        myTitle2.setTypeface(myFont2);
+        myDes.setTypeface(myFont2);
+        myDes2.setTypeface(myFont2);
+        myLoca.setTypeface(myFont2);
+        myLoca2.setTypeface(myFont2);
+        mySal.setTypeface(myFont2);
+        mySal2.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button8);
+        TextView myTextPost = (TextView) findViewById(R.id.button3);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+        myTextBack.setTypeface(myFont3);
+        myTextPost.setTypeface(myFont3);
+
         if(title.size()==1) {
             final TextView m = (TextView) findViewById(R.id.c1);
             m.setText(title.get(0));
@@ -137,6 +195,34 @@ public class AddingJob extends AppCompatActivity {
     }
     public void onButtonClickBack(View v) {
         setContentView(R.layout.paj1);
+
+        TextView myText = (TextView) findViewById(R.id.textView);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myTitle = (TextView) findViewById(R.id.textView2);
+        TextView myTitle2 = (TextView) findViewById(R.id.editTextjobTitle);
+        TextView myDes = (TextView) findViewById(R.id.textView3);
+        TextView myDes2 = (TextView) findViewById(R.id.editTextDes);
+        TextView myLoca = (TextView) findViewById(R.id.textView4);
+        TextView myLoca2 = (TextView) findViewById(R.id.editTextLoc);
+        TextView mySal = (TextView) findViewById(R.id.textView5);
+        TextView mySal2 = (TextView) findViewById(R.id.editTextSal);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myTitle.setTypeface(myFont2);
+        myTitle2.setTypeface(myFont2);
+        myDes.setTypeface(myFont2);
+        myDes2.setTypeface(myFont2);
+        myLoca.setTypeface(myFont2);
+        myLoca2.setTypeface(myFont2);
+        mySal.setTypeface(myFont2);
+        mySal2.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button15);
+        TextView myTextPost = (TextView) findViewById(R.id.button);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+        myTextBack.setTypeface(myFont3);
+        myTextPost.setTypeface(myFont3);
     }
 
     public void onButtonClickDelete1(View v) {
@@ -186,6 +272,35 @@ public class AddingJob extends AppCompatActivity {
 
     public void onButtonPostNew(View v){
         setContentView(R.layout.paj1);
+
+        TextView myText = (TextView) findViewById(R.id.textView);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myTitle = (TextView) findViewById(R.id.textView2);
+        TextView myTitle2 = (TextView) findViewById(R.id.editTextjobTitle);
+        TextView myDes = (TextView) findViewById(R.id.textView3);
+        TextView myDes2 = (TextView) findViewById(R.id.editTextDes);
+        TextView myLoca = (TextView) findViewById(R.id.textView4);
+        TextView myLoca2 = (TextView) findViewById(R.id.editTextLoc);
+        TextView mySal = (TextView) findViewById(R.id.textView5);
+        TextView mySal2 = (TextView) findViewById(R.id.editTextSal);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myTitle.setTypeface(myFont2);
+        myTitle2.setTypeface(myFont2);
+        myDes.setTypeface(myFont2);
+        myDes2.setTypeface(myFont2);
+        myLoca.setTypeface(myFont2);
+        myLoca2.setTypeface(myFont2);
+        mySal.setTypeface(myFont2);
+        mySal2.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button15);
+        TextView myTextPost = (TextView) findViewById(R.id.button);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+        myTextBack.setTypeface(myFont3);
+        myTextPost.setTypeface(myFont3);
+
     }
 
 public void onClickEmployer1(View v){
@@ -216,7 +331,33 @@ public void onClickEmployer1(View v){
         location = titleList.getStringArrayList("loca");
         salary = titleList.getStringArrayList("sal");
 
-      //  current = titleList.getInt("Current");
+        TextView myText = (TextView) findViewById(R.id.textView);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myTitle = (TextView) findViewById(R.id.textView2);
+        TextView myTitle2 = (TextView) findViewById(R.id.editTextjobTitle);
+        TextView myDes = (TextView) findViewById(R.id.textView3);
+        TextView myDes2 = (TextView) findViewById(R.id.editTextDes);
+        TextView myLoca = (TextView) findViewById(R.id.textView4);
+        TextView myLoca2 = (TextView) findViewById(R.id.editTextLoc);
+        TextView mySal = (TextView) findViewById(R.id.textView5);
+        TextView mySal2 = (TextView) findViewById(R.id.editTextSal);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myTitle.setTypeface(myFont2);
+        myTitle2.setTypeface(myFont2);
+        myDes.setTypeface(myFont2);
+        myDes2.setTypeface(myFont2);
+        myLoca.setTypeface(myFont2);
+        myLoca2.setTypeface(myFont2);
+        mySal.setTypeface(myFont2);
+        mySal2.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button15);
+        TextView myTextPost = (TextView) findViewById(R.id.button);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+        myTextBack.setTypeface(myFont3);
+        myTextPost.setTypeface(myFont3);
 
     }
 
