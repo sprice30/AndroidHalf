@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -41,16 +42,76 @@ public class Resume extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resume);
+
+        TextView myText = (TextView) findViewById(R.id.textView);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myText1 = (TextView) findViewById(R.id.button);
+        TextView myText2 = (TextView) findViewById(R.id.button2);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button15);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+        myTextBack.setTypeface(myFont3);
+
     }
-    public void onClickResumePost(View v) {setContentView(R.layout.resume_post);}
+    public void onClickResumePost(View v) {
+        setContentView(R.layout.resume_post);
+
+        TextView myText = (TextView) findViewById(R.id.textView);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myText1 = (TextView) findViewById(R.id.TAP);
+        TextView myText2 = (TextView) findViewById(R.id.button2);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button15);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+        myTextBack.setTypeface(myFont3);
+
+    }
+
+
+    public void onClickResumePic(View v) {
+        setContentView(R.layout.view_stored_resume);
+
+        TextView myText1 = (TextView) findViewById(R.id.res_title);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button15);
+        TextView myTextAdd = (TextView) findViewById(R.id.button3);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+        myTextBack.setTypeface(myFont3);
+        myTextAdd.setTypeface(myFont3);
+
+    }
 
 
 
-    public void onClickResumePic(View v) {setContentView(R.layout.view_stored_resume);}
+    public void onClickMain(View v){
+        setContentView(R.layout.activity_resume);
+        TextView myText = (TextView) findViewById(R.id.textView);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
 
+        TextView myText1 = (TextView) findViewById(R.id.button);
+        TextView myText2 = (TextView) findViewById(R.id.button2);
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
 
+        TextView myTextBack = (TextView) findViewById(R.id.button15);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+        myTextBack.setTypeface(myFont3);
 
-    public void onClickMain(View v){setContentView(R.layout.activity_resume);}
+    }
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
@@ -76,6 +137,38 @@ public class Resume extends AppCompatActivity {
 
     public void onClickPickBack(View v) {
         setContentView(R.layout.resume_view);
+
+        TextView myText = (TextView) findViewById(R.id.textView15);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myText1 = (TextView) findViewById(R.id.r1);
+        TextView myText2 = (TextView) findViewById(R.id.r2);
+        TextView myText3 = (TextView) findViewById(R.id.r3);
+        TextView myText4 = (TextView) findViewById(R.id.r4);
+
+        TextView myText1v = (TextView) findViewById(R.id.view1);
+        TextView myText2v = (TextView) findViewById(R.id.view2);
+        TextView myText3v = (TextView) findViewById(R.id.view3);
+        TextView myText4v = (TextView) findViewById(R.id.view4);
+
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+        myText3.setTypeface(myFont2);
+        myText4.setTypeface(myFont2);
+
+        myText1v.setTypeface(myFont2);
+        myText2v.setTypeface(myFont2);
+        myText3v.setTypeface(myFont2);
+        myText4v.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button15);
+        TextView myTextAdd = (TextView) findViewById(R.id.button8);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+        myTextBack.setTypeface(myFont3);
+        myTextAdd.setTypeface(myFont3);
+
         int a = tit.size();
         if (a == 0) {
         } else if (a == 1) {
@@ -154,6 +247,15 @@ public class Resume extends AppCompatActivity {
 
     public void onClickView1(View v){
         setContentView(R.layout.view_pic);
+
+        TextView myTitle = (TextView) findViewById(R.id.pic_title);
+        Typeface myFont1 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myTitle.setTypeface(myFont1);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button3);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+        myTextBack.setTypeface(myFont3);
+
         int temp = tit.size();
         if(temp > 0) {
             final TextView m = (TextView) findViewById(R.id.pic_title);
@@ -180,6 +282,15 @@ public class Resume extends AppCompatActivity {
         int temp = tit.size();
         if(temp > 1) {
             setContentView(R.layout.view_pic);
+
+            TextView myTitle = (TextView) findViewById(R.id.pic_title);
+            Typeface myFont1 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+            myTitle.setTypeface(myFont1);
+
+            TextView myTextBack = (TextView) findViewById(R.id.button3);
+            Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+            myTextBack.setTypeface(myFont3);
+
             final TextView m = (TextView) findViewById(R.id.pic_title);
             m.setText(tit.get(1));
             uri = image.get(1);
@@ -202,6 +313,15 @@ public class Resume extends AppCompatActivity {
         int temp = tit.size();
         if(temp > 2) {
             setContentView(R.layout.view_pic);
+
+            TextView myTitle = (TextView) findViewById(R.id.pic_title);
+            Typeface myFont1 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+            myTitle.setTypeface(myFont1);
+
+            TextView myTextBack = (TextView) findViewById(R.id.button3);
+            Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+            myTextBack.setTypeface(myFont3);
+
             final TextView m = (TextView) findViewById(R.id.pic_title);
             m.setText(tit.get(2));
             uri = image.get(2);
@@ -225,6 +345,15 @@ public class Resume extends AppCompatActivity {
         int temp = tit.size();
         if(temp > 3) {
             setContentView(R.layout.view_pic);
+
+            TextView myTitle = (TextView) findViewById(R.id.pic_title);
+            Typeface myFont1 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+            myTitle.setTypeface(myFont1);
+
+            TextView myTextBack = (TextView) findViewById(R.id.button3);
+            Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+            myTextBack.setTypeface(myFont3);
+
             final TextView m = (TextView) findViewById(R.id.pic_title);
             m.setText(tit.get(3));
             uri = image.get(3);
@@ -250,6 +379,40 @@ public class Resume extends AppCompatActivity {
         setContentView(R.layout.resume_view);
         tit.add(titlehold);
         image.add(uri);
+
+
+        TextView myText = (TextView) findViewById(R.id.textView52);
+        Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/BBLight.ttf");
+        myText.setTypeface(myFont);
+
+        TextView myText1 = (TextView) findViewById(R.id.r1);
+        TextView myText2 = (TextView) findViewById(R.id.r2);
+        TextView myText3 = (TextView) findViewById(R.id.r3);
+        TextView myText4 = (TextView) findViewById(R.id.r4);
+
+        TextView myText1v = (TextView) findViewById(R.id.view1);
+        TextView myText2v = (TextView) findViewById(R.id.view2);
+        TextView myText3v = (TextView) findViewById(R.id.view3);
+        TextView myText4v = (TextView) findViewById(R.id.view4);
+
+        Typeface myFont2 = Typeface.createFromAsset(getAssets(), "fonts/BrookeS8.ttf");
+        myText1.setTypeface(myFont2);
+        myText2.setTypeface(myFont2);
+        myText3.setTypeface(myFont2);
+        myText4.setTypeface(myFont2);
+
+        myText1v.setTypeface(myFont2);
+        myText2v.setTypeface(myFont2);
+        myText3v.setTypeface(myFont2);
+        myText4v.setTypeface(myFont2);
+
+        TextView myTextBack = (TextView) findViewById(R.id.button15);
+        TextView myTextAdd = (TextView) findViewById(R.id.button8);
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
+        myTextBack.setTypeface(myFont3);
+        myTextAdd.setTypeface(myFont3);
+
+
         if(current == 0) {
             final TextView m = (TextView) findViewById(R.id.r1);
             m.setText(tit.get(current));

@@ -38,7 +38,7 @@ public class Employer extends AppCompatActivity {
         myTextEmpl.setTypeface(myFont2);
 
         TextView myTextBack = (TextView) findViewById(R.id.button15);
-        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/green avocado.ttf");
+        Typeface myFont3 = Typeface.createFromAsset(getAssets(), "fonts/Aaargh.ttf");
         myTextBack.setTypeface(myFont3);
     }
     public void onJobPostStarted(View v){

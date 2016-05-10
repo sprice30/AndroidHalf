@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:hint="Enter Resume Title"
+        android:textSize="30dp"
         android:imeOptions="actionDone"
         android:ems="10"
         android:id="@+id/res_title" />

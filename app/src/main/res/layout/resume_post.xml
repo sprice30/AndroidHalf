@@ -12,8 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Post a Resume(s)"
-        android:textSize="40dp"
+        android:text="Post a Resume"
+        android:textSize="50dp"
+        android:gravity="center"
         android:id="@+id/textView"
         android:layout_marginTop="57dp"
         android:layout_alignParentTop="true"
@@ -41,6 +42,55 @@
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2" />
 
+   <!-- <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3">
+
+        <TextView
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView50"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <Button
+            android:layout_width="272dp"
+            android:layout_height="85dp"
+            android:text="Choose Photo"
+            android:textSize="30dp"
+            android:id="@+id/TAP"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:onClick="onButtonClickLoadImage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView4"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <Button
+            android:layout_width="273dp"
+            android:layout_height="85dp"
+            android:text="Take Photo"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:id="@+id/button2"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:onClick="onButtonClickTakeImage"/>
+
+    </GridLayout>
+    -->
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -54,11 +104,15 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Choose Photo"
+            android:text="Choose a Photo"
+            android:textSize="25dp"
             android:id="@+id/TAP"
             android:layout_row="0"
             android:layout_column="1"
-            android:onClick="onButtonClickLoadImage" />
+            android:onClick="onButtonClickLoadImage"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,6 +126,7 @@
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:text="Take Photo"
+            android:textSize="25dp"
             android:id="@+id/button2"
             android:layout_row="2"
             android:layout_column="1"
